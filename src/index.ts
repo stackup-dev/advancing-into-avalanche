@@ -22,14 +22,14 @@ const xchain: AVMAPI = avalanche.XChain();
 type KeyInfo = { address: string; publicKey: string; privateKey: string };
 
 const senderKeys: KeyInfo = {
-  address: "insert-sender-address",
-  publicKey: "insert-sender-publicKey",
-  privateKey: "insert-sender-pivateKey",
+  address: "X-fuji1yj3vc6mu6h9zzl3cmzc2d58dpnm3h00qvszte6",
+  publicKey: "6ayS3Kw1wMe8Vjyp7qK9qSpq9KPJcPEJqJso52LdfnhdHYAyTK",
+  privateKey: "PrivateKey-27sNTm6xrzc52au37T4VYrqQPLujanyU4hu4DXXb3LY1UHUXDa",
 };
-const assetID = "insert-assetID"; // the transaction ID is used as asset ID
-const friendsAddress = "insert-receiver-address"; // address format is Bech32
+const assetID = "9tmwtbfGNYbUvhBcx5MPYnCRQ2wZ6gX2UjfKyLaNeXTFaKvBX"; // the transaction ID is used as asset ID
+const friendsAddress = "X-fuji1g2ptyqx6ddmqzfu7ql8e3cqfrg6p4ha80qev3m"; // address format is Bech32
 // ============ Main Part of Script ===================
-const step: number = 0; // Values can be 0, 6, 10, 11
+const step: number = 11; // Values can be 0, 6, 10, 11
 switch (step) {
   case 6:
     console.log("Running Step 6 Code");
@@ -87,8 +87,8 @@ async function createAsset(): Promise<void> {
     "AVM utility method buildCreateAssetTx to create an ANT"
   );
 
-  const name: string = "insert-stackup-username";
-  const symbol: string = "insert-symbol";
+  const name: string = "whoisorioki";
+  const symbol: string = "SU";
   const denomination: number = 3;
 
   const avmUTXOResponse: GetUTXOsResponse = await xchain.getUTXOs(
