@@ -69,7 +69,7 @@ async function createKeyPairs(): Promise<void> {
   });
   console.log("============================================");
   console.log(
-    "Keypairs generated! Please remember to copy therm and save it somewhere for the next step."
+    "Keypairs generated! Please remember to copy them and save it somewhere for the next step."
   );
 }
 
@@ -148,7 +148,7 @@ async function sendAsset() {
   let addressString = keypair.getAddressString(); //returns string
   let utxos = (await xchain.getUTXOs(addressString)).utxos;
 
-  let sendAmount = new BN(100); //amounts are in BN format
+  let sendAmount = new BN(200); //amounts are in BN format
   let assetid = assetID; //avaSerialized string
   let mybalance = utxos.getBalance([address], assetid); //returns 1000 as a BN
 
